@@ -1,18 +1,18 @@
-// views/HomeView.vue
+// views/PerfilView.vue
 <template>
   <div>
     <Navbar />
-    <home-component />
+    <perfil-component />
   </div>
 </template>
 
 <script>
-import HomeComponent from '../components/Home.vue'
+import PerfilComponent from '../components/Perfil.vue'
 import Navbar from '../components/Navbar.vue'
 
 export default {
   components: {
-    'home-component': HomeComponent,
+    'perfil-component': PerfilComponent,
     Navbar
   }
 }
