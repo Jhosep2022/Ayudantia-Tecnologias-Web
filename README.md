@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # mi-proyecto-vue
 
 ## Project setup
@@ -61,6 +61,3 @@ npm install vue-router@3
 
 `router-link` controla la navegación entre rutas, mientras que `router-view` muestra el contenido de la ruta actual. `router-link` se utiliza en la plantilla de los componentes, mientras que `router-view` se define en la configuración global del enrutador. Ambos componentes son esenciales para crear una navegación fluida y una estructura organizada en aplicaciones Vue.js con enrutamiento.
 
-
-
->>>>>>> 7339de3c06039f1307d2c892d4010e7b6e5294a1
