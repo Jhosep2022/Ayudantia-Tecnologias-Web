@@ -15,7 +15,7 @@ depues crearemos un proyecto con el nombre (mi-proyecto-vue)
 ```bash
 vue create mi-proyecto-vue
 ```
-![image](https://github.com/Jhosep2022/Ayudantia-Tecnologias-Web/assets/114316578/59f8a92d-4da5-473b-9128-c8c3ac6e2575)
+
 seleccionamos el as ([Vue 3] stylus, babel, router) ya que este nos crea el router por defecto 
 
 # Paso 2: Instalar Vue Router
