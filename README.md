@@ -14,6 +14,11 @@ npm run build
 ```
 # Ayudantía de Tecnologías Web
 
+videos que te pueden ayudar a entener el vue router
+
+https://www.youtube.com/watch?v=5JNBQMg7WyI
+
+
 ## Proyecto de Vue.js 3 con Vue Router
 
 En esta ayudantía vamos a construir paso a paso un proyecto de Vue.js 2 utilizando Vue Router para manejar el enrutamiento.
