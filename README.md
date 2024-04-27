@@ -1,24 +1,17 @@
 
 # mi-proyecto-vue
-
 ## Project setup
 ```
 npm install
 ```
-
 ### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
-
 ### Compiles and minifies for production
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-=======
 # Ayudantía de Tecnologías Web
 
 ## Proyecto de Vue.js 3 con Vue Router
@@ -37,7 +30,12 @@ depues crearemos un proyecto con el nombre (mi-proyecto-vue)
 vue create mi-proyecto-vue
 ```
 
-seleccionamos el as ([Vue 3] stylus, babel, router) ya que este nos crea el router por defecto 
+seleccionamos el: 
+```bash
+as ([Vue 3] stylus, babel, router) 
+```
+ya que este nos crea el router por defecto 
+
 
 # Paso 2: Instalar Vue Router
 -nos dirigimos al proyecto que creamos 
