@@ -1,7 +1,7 @@
 
 # mi-proyecto-vue
-
-
+`video del proyecto`
+https://drive.google.com/uc?id=1bma4G-LxRLtqr0XcRe8roAPFcvz1le3v&export=download
 
 ## Project setup
 ```
