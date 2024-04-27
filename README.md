@@ -49,15 +49,23 @@ npm install vue-router@3
 
 # Vue.js Routing: `router-link` y `router-view`
 
+Imagina que una página web es como un gran libro de cuentos, donde cada historia es una página diferente. En este libro, para ir de una historia a otra necesitas algo que te guíe. Aquí es donde entran en juego `router-link` y `router-view`, que son conceptos que se usan en Vue.js, un framework para construir páginas web.
+
 ## `router-link`
 
-`router-link` es un componente HTML que se utiliza para crear enlaces que permiten navegar entre diferentes rutas de la aplicación. Se representa como una etiqueta `<a>` o cualquier otro elemento HTML válido. El atributo `to` especifica la ruta de destino. Al hacer clic en el enlace, se actualiza la URL del navegador y se renderiza el componente correspondiente en `router-view`.
+Piensa en `router-link` como marcapáginas mágicos. Cuando quieres ir a una historia específica, solo necesitas tocar el marcapáginas y ¡pum! te lleva directamente a esa historia. En términos de una página web, `router-link` es como un enlace que te permite navegar a diferentes partes de la página web o a otras páginas sin necesidad de cargar toda la página de nuevo.
 
 ## `router-view`
 
-`router-view` es un componente especial que representa el área de la interfaz de usuario donde se renderizan los componentes de las diferentes rutas. Solo puede existir una instancia de `router-view` por aplicación. Se utiliza la directiva `v-router-view` para indicarle a Vue dónde renderizar el componente de la ruta actual. El componente renderizado en `router-view` se define en la configuración de las rutas del enrutador.
+Ahora, imagina que `router-view` es el espacio en blanco de cada página de tu libro de cuentos donde se escribe la historia. Cada vez que usas uno de tus marcapáginas mágicos (`router-link`), `router-view` cambia para mostrarte la historia (o página web) que quieres leer. Es el lugar donde se muestra el contenido de la página a la que has navegado.
 
 ## En resumen
 
-`router-link` controla la navegación entre rutas, mientras que `router-view` muestra el contenido de la ruta actual. `router-link` se utiliza en la plantilla de los componentes, mientras que `router-view` se define en la configuración global del enrutador. Ambos componentes son esenciales para crear una navegación fluida y una estructura organizada en aplicaciones Vue.js con enrutamiento.
+`router-link` es como un marcapáginas que te lleva a la parte del libro que quieres leer.
+`router-view` es el espacio donde se muestra la historia que has elegido leer.
+
+Ambos son esenciales para crear una navegación fluida y una estructura organizada en aplicaciones Vue.js con enrutamiento.
+
+
+
 
