@@ -17,61 +17,57 @@ export const useUserStore = defineStore('user', {
         editingUser: null
     }),
     actions: {
-        fetchUsers() {
-            console.log('Fetching users...');
-            return axios.get('http://localhost:3000/users')
-                .then(response => {
-                    console.log('Users fetched successfully:', response.data);
-                    this.users = response.data;
-                })
-                .catch(error => {
-                    console.error('Error fetching users:', error);
-                });
+        async fetchUsers() {
+            try {
+              console.log('Fetching users...');
+              const response = await apiClient.get('/');
+              console.log('Users fetched successfully:', response.data);
+              this.users = response.data;
+            } catch (error) {
+              console.error('Error fetching users:', error);
+            }
         },
-        addUser() {
+        async addUser() {
+          try {
             console.log('Adding user:', this.newUser);
-            return apiClient.post('/', this.newUser)
-                .then(() => {
-                    console.log('User added successfully.');
-                    this.resetForm();
-                    this.fetchUsers();
-                })
-                .catch(error => {
-                    console.error('Error adding user:', error);
-                });
+            const response = await apiClient.post('/', this.newUser);
+            console.log('User added successfully:', response.data);
+            this.resetForm();
+            await this.fetchUsers();
+          } catch (error) {
+            console.error('Error adding user:', error.response);
+          }
         },
-        deleteUser(id) {
+        async deleteUser(id) {
+          try {
             console.log('Deleting user with ID:', id);
-            return apiClient.delete('/' + id)
-                .then(() => {
-                    console.log('User deleted successfully.');
-                    this.fetchUsers();
-                })
-                .catch(error => {
-                    console.error('Error deleting user:', error);
-                });
+            await apiClient.delete('/' + id);
+            console.log('User deleted successfully.');
+            await this.fetchUsers();
+          } catch (error) {
+            console.error('Error deleting user:', error);
+          }
         },
-        editUser(user) {
-            console.log('Editing user:', user);
-            this.newUser = { ...user };
-            this.editingUser = user.id;
-        },
-        updateExistingUser() {
+        async updateExistingUser() {
+          try {
             console.log('Updating user:', this.newUser);
-            return apiClient.put('/' + this.editingUser, this.newUser)
-                .then(() => {
-                    console.log('User updated successfully.');
-                    this.resetForm();
-                    this.fetchUsers();
-                })
-                .catch(error => {
-                    console.error('Error updating user:', error);
-                });
+            await apiClient.put('/' + this.editingUser, this.newUser);
+            console.log('User updated successfully.');
+            this.resetForm();
+            await this.fetchUsers();
+          } catch (error) {
+            console.error('Error updating user:', error);
+          }
         },
         resetForm() {
-            console.log('Resetting form.');
-            this.newUser = { nombre: '', edad: null };
-            this.editingUser = null;
+          console.log('Resetting form.');
+          this.newUser = { nombre: '', edad: null };
+          this.editingUser = null;
+        },
+        cancelEdit() {
+          console.log('Editing cancelled.');
+          this.editingUser = null;
+          this.resetForm();
         }
     }
 });

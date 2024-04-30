@@ -52,9 +52,15 @@
   </template>
   
   <script setup>
+import { onMounted } from 'vue';
 import { useUserStore } from '../stores/userStore';
+
 const store = useUserStore();
 const year = new Date().getFullYear();
+
+onMounted(async () => {
+  await store.fetchUsers();
+});
 
 console.log('Estado de la tienda de usuarios:', store);
 </script>
