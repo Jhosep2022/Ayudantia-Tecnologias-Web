@@ -3,6 +3,19 @@
 `video del proyecto`
 https://drive.google.com/file/d/1bma4G-LxRLtqr0XcRe8roAPFcvz1le3v/view?usp=sharing
 
+## Para realizar la coneccion con backend se necesita estos dependencias
+para el consumo de servicios del backend
+```
+npm install axios
+```
+para el gestor de estados
+```
+npm install pinia
+```
+
+
+
+
 ## Project setup
 ```
 npm install
