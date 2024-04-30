@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:3000/users', // Asegúrate de que la URL base coincide con tu servidor Node.js
-  withCredentials: false, // Esto es opcional dependiendo de si necesitas manejar cookies
+  baseURL: 'http://localhost:3000/users',
+  withCredentials: false, 
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json'
